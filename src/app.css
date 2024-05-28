@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+pre code {
+	counter-reset: line; /* Reset counter for each code block */
+}
+
+pre code .line {
+	counter-increment: line; /* Increment counter for each line */
+}
+
+pre code .line:before {
+	content: counter(line); /* Display line number followed by a space */
+	display: inline-block; /* Display number inline */
+	color: gray; /* Optional: set a color for line numbers */
+	width: 3em; /* Set the width of the line number column */
+	margin-right: 4px; /* Add margin between number and code */
+}
